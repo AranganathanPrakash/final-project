@@ -5,7 +5,7 @@ pipeline {
     agent any
     environment {
         registry = "973625940209.dkr.ecr.us-east-1.amazonaws.com/arar123"
-        AWS_REGION = "us-east-1" 
+        AWS_REGION = 'us-east-1' 
     }
     stages {
  
