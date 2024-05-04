@@ -3,6 +3,8 @@ pipeline {
     
     environment {
         registry = "973625940209.dkr.ecr.us-east-1.amazonaws.com/arar123"
+        EKS_CLUSTER_NAME = "clustername"
+        KUBE_NAMESPACE = "default"
     }
     
     tools {
