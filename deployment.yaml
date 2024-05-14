@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: myapp-container
-        image: 973625940209.dkr.ecr.us-east-1.amazonaws.com/arar123
+        image: 973625940209.dkr.ecr.us-east-1.amazonaws.com/springpro8888
         resources:
           limits:
             memory: "128Mi"
