@@ -29,8 +29,8 @@ pipeline {
             steps {
                 script {
                     // Authenticate with ECR and push Docker image
-                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS']]) {
-                        sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${registry}"
+                     {
+                        sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 973625940209.dkr.ecr.us-east-1.amazonaws.com"
                         sh "docker push ${registry}"
                     }
                 }
