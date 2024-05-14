@@ -29,7 +29,7 @@ pipeline {
      steps{  
          script {
                 sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 973625940209.dkr.ecr.us-east-1.amazonaws.com'
-                sh 'docker push springpro8888:latest 973625940209.dkr.ecr.us-east-1.amazonaws.com/springpro8888:latest'
+                sh 'docker push  973625940209.dkr.ecr.us-east-1.amazonaws.com/springpro8888:latest'
                     }
                 }
             }
