@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         // Define environment variables
-        registry = "973625940209.dkr.ecr.us-east-1.amazonaws.com/arar123"
+        registry = "973625940209.dkr.ecr.us-east-1.amazonaws.com/springpro8888"
         eksClusterName = "clustername"
         kubeNamespace = "default"
     }
@@ -48,7 +48,7 @@ pipeline {
                     // Authenticate with Kubernetes cluster
                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS']]) {
                         // Configure Kubernetes access
-                        withKubeConfig(credentialsId: 'newk8s', serverUrl: 'https://D2A53313294068B898A78542A83CF533.gr7.us-east-1.eks.amazonaws.com') {
+                        withKubeConfig(credentialsId: 'newk8s', serverUrl: 'https://53027EEE4265E52B92577F4B09B9E9CD.gr7.us-east-1.eks.amazonaws.com') {
                             // Deploy application to Kubernetes
                             sh 'kubectl apply -f deployment.yaml'
                         }
