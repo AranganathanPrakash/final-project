@@ -37,14 +37,10 @@ pipeline {
        stage('K8S Deploy') {
             steps {
                 script {
-                    // Authenticate with Kubernetes cluster
-                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS']]) {
-                        // Configure Kubernetes access
                         withKubeConfig(credentialsId: 'newk8s', serverUrl: 'https://53027EEE4265E52B92577F4B09B9E9CD.gr7.us-east-1.eks.amazonaws.com') {
-                            // Deploy application to Kubernetes
+                            
                             sh 'kubectl apply -f deployment.yaml'
                         }
-                    }
                 }
             }
         }
