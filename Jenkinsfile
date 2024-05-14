@@ -33,9 +33,8 @@ pipeline {
                     }
                 }
             }
-        }
         
-        stage('K8S Deploy') {
+       stage('K8S Deploy') {
             steps {
                 script {
                     // Authenticate with Kubernetes cluster
@@ -50,3 +49,4 @@ pipeline {
             }
         }
     }
+}
