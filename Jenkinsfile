@@ -8,11 +8,6 @@ pipeline {
         kubeNamespace = "default"
     }
     
-    tools {
-        // Use Maven tool for building
-        maven 'Maven3'
-    }
-    
     stages {
         stage('Build') {
             steps {
