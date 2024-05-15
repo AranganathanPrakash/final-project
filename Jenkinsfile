@@ -29,7 +29,7 @@ pipeline {
      steps{  
          script {
                 sh 'aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 973625940209.dkr.ecr.us-east-2.amazonaws.com'
-                sh 'docker push arar123kk:latest 973625940209.dkr.ecr.us-east-2.amazonaws.com/arar123kk:latest'
+                sh 'docker push  973625940209.dkr.ecr.us-east-2.amazonaws.com/arar123kk:latest'
                     }
                 }
             }
