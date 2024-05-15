@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         // Define environment variables
-        registry = "973625940209.dkr.ecr.us-east-1.amazonaws.com/springpro8888"
+        registry = "973625940209.dkr.ecr.us-east-2.amazonaws.com/arar123kk"
         eksClusterName = "clustername"
         kubeNamespace = "default"
     }
@@ -28,8 +28,8 @@ pipeline {
         stage('Pushing to ECR') {
      steps{  
          script {
-                sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 973625940209.dkr.ecr.us-east-1.amazonaws.com'
-                sh 'docker push  973625940209.dkr.ecr.us-east-1.amazonaws.com/springpro8888:latest'
+                sh 'aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 973625940209.dkr.ecr.us-east-2.amazonaws.com'
+                sh 'docker push arar123kk:latest 973625940209.dkr.ecr.us-east-2.amazonaws.com/arar123kk:latest'
                     }
                 }
             }
