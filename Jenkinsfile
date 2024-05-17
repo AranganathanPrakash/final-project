@@ -4,8 +4,7 @@ pipeline {
     environment {
         // Define environment variables
         registry = "973625940209.dkr.ecr.us-east-2.amazonaws.com/arar123kk"
-        eksClusterName = "clustername"
-        kubeNamespace = "default"
+        
     }
     
     stages {
